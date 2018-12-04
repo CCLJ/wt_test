@@ -73,7 +73,6 @@ logging.info("New session ––– " + str(datetime.datetime.now()) + " ––�
 
 app.config.from_object(config.ProductionConfig)
 # db.init_app(app)
-# db.create_all(app)
 security = Security(app)
 socketio = SocketIO(app)
 

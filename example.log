@@ -106,3 +106,78 @@ INFO:root:New session ––– 2018-12-04 16:33:21.489194 ––– New session
 INFO:engineio:Server initialized for gevent.
 INFO:root:New session ––– 2018-12-04 16:33:35.991525 ––– New session
 INFO:engineio:Server initialized for gevent.
+INFO:root:New session ––– 2018-12-04 16:43:33.757936 ––– New session
+INFO:engineio:Server initialized for gevent.
+INFO:root:New session ––– 2018-12-04 16:45:40.915025 ––– New session
+INFO:engineio:Server initialized for gevent.
+INFO:root:New session ––– 2018-12-04 16:57:23.539074 ––– New session
+INFO:engineio:Server initialized for gevent.
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+INFO:root:New session ––– 2018-12-04 16:57:24.626431 ––– New session
+INFO:engineio:Server initialized for gevent.
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger pin code: 252-563-367
+INFO:root:New session ––– 2018-12-04 17:00:48.192072 ––– New session
+INFO:engineio:Server initialized for gevent.
+INFO:root:New session ––– 2018-12-04 17:00:57.489988 ––– New session
+INFO:engineio:Server initialized for gevent.
+INFO:root:New session ––– 2018-12-04 17:01:46.328415 ––– New session
+INFO:root:New session ––– 2018-12-04 17:02:16.328731 ––– New session
+INFO:engineio:Server initialized for gevent.
+INFO:root:New session ––– 2018-12-04 17:03:00.577243 ––– New session
+INFO:engineio:Server initialized for gevent.
+INFO:root:New session ––– 2018-12-04 17:03:35.362530 ––– New session
+INFO:engineio:Server initialized for gevent.
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+INFO:root:New session ––– 2018-12-04 17:03:42.081622 ––– New session
+INFO:engineio:Server initialized for gevent.
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger pin code: 252-563-367
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2018 17:03:47] "GET /api/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2018 17:03:48] "GET /api/swagger.json HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2018 17:03:48] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2018 17:04:03] "GET /swaggerui/bower/swagger-ui/dist/images/throbber.gif HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2018 17:04:11] "POST /api/users/login HTTP/1.1" 401 -
+INFO:root:New session ––– 2018-12-04 17:04:53.065875 ––– New session
+INFO:engineio:Server initialized for gevent.
+INFO:root:New session ––– 2018-12-04 17:05:06.982351 ––– New session
+INFO:engineio:Server initialized for gevent.
+INFO:root:New session ––– 2018-12-04 17:06:45.029937 ––– New session
+INFO:engineio:Server initialized for gevent.
+INFO:root:New session ––– 2018-12-04 17:07:17.519859 ––– New session
+INFO:engineio:Server initialized for gevent.
+INFO:werkzeug: * Detected change in '/Users/jorgevazquez/Documents/wt_test/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:root:New session ––– 2018-12-04 17:10:10.945662 ––– New session
+INFO:engineio:Server initialized for gevent.
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger pin code: 252-563-367
+INFO:werkzeug: * Detected change in '/Users/jorgevazquez/Documents/wt_test/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:root:New session ––– 2018-12-04 17:21:05.248583 ––– New session
+INFO:engineio:Server initialized for gevent.
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger pin code: 252-563-367
+INFO:werkzeug: * Detected change in '/Users/jorgevazquez/Documents/wt_test/config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:root:New session ––– 2018-12-04 17:24:25.239646 ––– New session
+INFO:engineio:Server initialized for gevent.
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger pin code: 252-563-367
+INFO:werkzeug: * Detected change in '/Users/jorgevazquez/Documents/wt_test/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:root:New session ––– 2018-12-04 17:24:56.419741 ––– New session
+INFO:root:New session ––– 2018-12-04 17:25:52.234453 ––– New session
+INFO:engineio:Server initialized for gevent.
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+INFO:root:New session ––– 2018-12-04 17:25:53.484882 ––– New session
+INFO:engineio:Server initialized for gevent.
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger pin code: 252-563-367
+INFO:root:New session ––– 2018-12-04 17:26:13.836675 ––– New session
+INFO:engineio:Server initialized for gevent.
+INFO:root:New session ––– 2018-12-04 17:26:18.618371 ––– New session
+INFO:engineio:Server initialized for gevent.
