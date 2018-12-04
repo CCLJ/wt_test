@@ -50,6 +50,7 @@ def create_app():
 # app.config.from_object(os.environ['APP_SETTINGS'])
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 db.init_app(app)
 CORS(app)
 blueprint = Blueprint('api', __name__, url_prefix='/api')
