@@ -4,6 +4,7 @@ import werkzeug.serving
 import config
 import os
 import datetime
+import psycopg2
 
 from flask import Flask, Blueprint
 from flask_sqlalchemy import SQLAlchemy
@@ -78,6 +79,10 @@ socketio = SocketIO(app)
 
 socketio.on_namespace(chat.ChatNamespace('/chat'))
 socketio.on_namespace(contest.ContestNamespace('/contest'))
+
+DATABASE_URL = os.environ['DATABASE_URL']
+
+conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 # CORS(app)
 
