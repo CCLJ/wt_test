@@ -181,3 +181,157 @@ INFO:root:New session ––– 2018-12-04 17:26:13.836675 ––– New session
 INFO:engineio:Server initialized for gevent.
 INFO:root:New session ––– 2018-12-04 17:26:18.618371 ––– New session
 INFO:engineio:Server initialized for gevent.
+INFO:root:New session ––– 2018-12-04 17:30:35.395786 ––– New session
+INFO:engineio:Server initialized for gevent.
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+INFO:root:New session ––– 2018-12-04 17:30:36.560455 ––– New session
+INFO:engineio:Server initialized for gevent.
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger pin code: 252-563-367
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2018 17:30:46] "GET /api/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2018 17:30:47] "GET /api/swagger.json HTTP/1.1" 200 -
+ERROR:api.restplus:An unhandled exception occurred.
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
+    context)
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 462, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.ProgrammingError: relation "user" does not exist
+LINE 2: FROM "user" 
+             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/flask/app.py", line 1639, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/flask/app.py", line 1625, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/flask_restplus/api.py", line 309, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/flask/views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/flask_restplus/resource.py", line 44, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/Users/jorgevazquez/Documents/wt_test/api/users/users.py", line 81, in post
+    if verify_password(email, password):
+  File "/Users/jorgevazquez/Documents/wt_test/api/users/users.py", line 225, in verify_password
+    user = User.query.filter_by(email=email_or_token).first()
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 2695, in first
+    ret = list(self[0:1])
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 2487, in __getitem__
+    return list(res)
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 2795, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 2818, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 945, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 263, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1053, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1189, in _execute_context
+    context)
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1393, in _handle_dbapi_exception
+    exc_info
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 202, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 185, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
+    context)
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 462, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.ProgrammingError) relation "user" does not exist
+LINE 2: FROM "user" 
+             ^
+ [SQL: 'SELECT "user".id AS user_id, "user".created AS user_created, "user".updated AS user_updated, "user".email AS user_email, "user".enrollment AS user_enrollment, "user".password_hash AS user_password_hash, "user".active AS user_active, "user".first_name AS user_first_name, "user".last_name AS user_last_name, "user".role AS user_role \nFROM "user" \nWHERE "user".email = %(email_1)s \n LIMIT %(param_1)s'] [parameters: {'email_1': 'admin@admin.com', 'param_1': 1}]
+ERROR:api.restplus:An unhandled exception occurred.
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
+    context)
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 462, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.ProgrammingError: relation "user" does not exist
+LINE 2: FROM "user" 
+             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/flask/app.py", line 1988, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/flask/app.py", line 1641, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/flask_restplus/api.py", line 536, in error_router
+    return original_handler(e)
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/flask/app.py", line 1544, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/flask/app.py", line 1639, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/flask/app.py", line 1625, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/flask_restplus/api.py", line 309, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/flask/views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/flask_restplus/resource.py", line 44, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/Users/jorgevazquez/Documents/wt_test/api/users/users.py", line 81, in post
+    if verify_password(email, password):
+  File "/Users/jorgevazquez/Documents/wt_test/api/users/users.py", line 225, in verify_password
+    user = User.query.filter_by(email=email_or_token).first()
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 2695, in first
+    ret = list(self[0:1])
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 2487, in __getitem__
+    return list(res)
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 2795, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 2818, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 945, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 263, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1053, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1189, in _execute_context
+    context)
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1393, in _handle_dbapi_exception
+    exc_info
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 202, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 185, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
+    context)
+  File "/usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 462, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.ProgrammingError) relation "user" does not exist
+LINE 2: FROM "user" 
+             ^
+ [SQL: 'SELECT "user".id AS user_id, "user".created AS user_created, "user".updated AS user_updated, "user".email AS user_email, "user".enrollment AS user_enrollment, "user".password_hash AS user_password_hash, "user".active AS user_active, "user".first_name AS user_first_name, "user".last_name AS user_last_name, "user".role AS user_role \nFROM "user" \nWHERE "user".email = %(email_1)s \n LIMIT %(param_1)s'] [parameters: {'email_1': 'admin@admin.com', 'param_1': 1}]
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2018 17:30:59] "POST /api/users/login HTTP/1.1" 500 -
+INFO:root:New session ––– 2018-12-04 17:31:19.746728 ––– New session
+INFO:engineio:Server initialized for gevent.
+INFO:root:New session ––– 2018-12-04 17:31:27.829600 ––– New session
+INFO:engineio:Server initialized for gevent.
+INFO:root:New session ––– 2018-12-04 17:32:15.931599 ––– New session
+INFO:engineio:Server initialized for gevent.
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+INFO:root:New session ––– 2018-12-04 17:32:17.190235 ––– New session
+INFO:engineio:Server initialized for gevent.
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger pin code: 252-563-367
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2018 17:32:17] "GET /api/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2018 17:32:18] "GET /api/swagger.json HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Dec/2018 17:32:32] "POST /api/users/login HTTP/1.1" 401 -
