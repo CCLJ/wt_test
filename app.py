@@ -53,6 +53,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://qfdnpojiaqmdve:eae7268ed43d9
 db = SQLAlchemy(app)
 CORS(app)
 blueprint = Blueprint('api', __name__, url_prefix='/api')
+api.init_app(blueprint)
 api.add_namespace(users_namespace)
 api.add_namespace(evaluator_namespace)
 api.add_namespace(courses_namespace)
@@ -83,7 +84,6 @@ DATABASE_URL = os.environ['DATABASE_URL']
 
 conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
-api.init_app(blueprint)
 db.init_app(app)
 
 @app.route('/')
