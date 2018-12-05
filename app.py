@@ -43,12 +43,14 @@ def create_app():
     db.init_app(app)
     return app
 
+db = SQLALCHEMY()
+
 # app = create_app()
 
 # app.config.from_object(os.environ['APP_SETTINGS'])
 
 app = Flask(__name__)
-db = init_app(app)
+db.init_app(app)
 # app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 CORS(app)
