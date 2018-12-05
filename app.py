@@ -48,9 +48,9 @@ def create_app():
 # app.config.from_object(os.environ['APP_SETTINGS'])
 
 app = Flask(__name__)
+db = init_app(app)
 # app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
-db = SQLAlchemy(app)
 CORS(app)
 blueprint = Blueprint('api', __name__, url_prefix='/api')
 api.init_app(blueprint)
@@ -84,7 +84,7 @@ DATABASE_URL = os.environ['DATABASE_URL']
 
 conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
-db.init_app(app)
+# db.init_app(app)
 
 @app.route('/')
 def hello():
