@@ -36,23 +36,11 @@ from sockets import ContestNamespace as contest
 
 from flask_cors import CORS, cross_origin
 
-
-
-def create_app():
-    app = Flask(__name__)
-    db.init_app(app)
-    return app
-
-# db = SQLAlchemy()
-
-# app = create_app()
-
-# app.config.from_object(os.environ['APP_SETTINGS'])
-
 app = Flask(__name__)
 # app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 CORS(app)
+
 blueprint = Blueprint('api', __name__, url_prefix='/api')
 api.init_app(blueprint)
 api.add_namespace(users_namespace)
@@ -70,6 +58,7 @@ api.add_namespace(forum_namespace)
 api.add_namespace(comment_namespace)
 api.add_namespace(messages_namespace)
 app.register_blueprint(blueprint)
+
 logging.basicConfig(filename='example.log', level=logging.DEBUG)
 logging.info("New session ––– " + str(datetime.datetime.now()) + " ––– New session")
 
@@ -85,7 +74,7 @@ DATABASE_URL = os.environ['DATABASE_URL']
 
 conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
-# db.init_app(app)
+)
 
 @app.route('/')
 def hello():
