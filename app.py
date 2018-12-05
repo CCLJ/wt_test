@@ -43,7 +43,7 @@ def create_app():
     db.init_app(app)
     return app
 
-db = SQLAlchemy()
+# db = SQLAlchemy()
 
 # app = create_app()
 
