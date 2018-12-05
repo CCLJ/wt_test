@@ -51,10 +51,8 @@ app = Flask(__name__)
 # app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://qfdnpojiaqmdve:eae7268ed43d9d819f8206d67315b71885f08014e5143bf57f7a0150d1bb2e70@ec2-54-197-249-140.compute-1.amazonaws.com:5432/da6rfufo0kq3d0'
 db = SQLAlchemy(app)
-db.init_app(app)
 CORS(app)
 blueprint = Blueprint('api', __name__, url_prefix='/api')
-api.init_app(blueprint)
 api.add_namespace(users_namespace)
 api.add_namespace(evaluator_namespace)
 api.add_namespace(courses_namespace)
@@ -85,6 +83,8 @@ DATABASE_URL = os.environ['DATABASE_URL']
 
 conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
+api.init_app(blueprint)
+db.init_app(app)
 
 @app.route('/')
 def hello():
