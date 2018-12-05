@@ -50,7 +50,6 @@ def create_app():
 # app.config.from_object(os.environ['APP_SETTINGS'])
 
 app = Flask(__name__)
-db.init_app(app)
 # app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 CORS(app)
@@ -75,7 +74,7 @@ logging.basicConfig(filename='example.log', level=logging.DEBUG)
 logging.info("New session ––– " + str(datetime.datetime.now()) + " ––– New session")
 
 app.config.from_object(config.ProductionConfig)
-# db.init_app(app)
+db.init_app(app)
 security = Security(app)
 socketio = SocketIO(app)
 
