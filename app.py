@@ -49,7 +49,7 @@ def create_app():
 
 app = Flask(__name__)
 # app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://qfdnpojiaqmdve:eae7268ed43d9d819f8206d67315b71885f08014e5143bf57f7a0150d1bb2e70@ec2-54-197-249-140.compute-1.amazonaws.com:5432/da6rfufo0kq3d0'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 db = SQLAlchemy(app)
 CORS(app)
 blueprint = Blueprint('api', __name__, url_prefix='/api')
